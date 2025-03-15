@@ -23,3 +23,7 @@ SELECT FROM I_JOURNALENTRY
     AND FiscalYear = @p_gjahr 
   INTO CORRESPONDING FIELDS OF TABLE @rt_result.
 ```
+
+## Disclaimer
+
+An ABAP [SELECT statement](https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-US/abapselect_shortref.htm) could be really complex to parse, so there actually be errors in the parser.
