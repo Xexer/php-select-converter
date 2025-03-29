@@ -331,14 +331,14 @@ class lcl_select_statement {
         continue;
       }
       
-      if (strtoupper($field) === lhc_order_field::C_ORDER_ASC || strtoupper($field) === lhc_order_field::C_ORDER_DESC) {
-        $last_field->order = strtoupper($field);
-        continue;
-      }
-      
       $field = str_replace(',', '', $field);
       $field = trim($field);
       if (empty($field)) {
+        continue;
+      }
+      
+      if (strtoupper($field) === lhc_order_field::C_ORDER_ASC || strtoupper($field) === lhc_order_field::C_ORDER_DESC) {
+        $last_field->order = strtoupper($field);
         continue;
       }
       
